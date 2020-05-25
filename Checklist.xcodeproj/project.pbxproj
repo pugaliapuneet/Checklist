@@ -13,6 +13,8 @@
 		9069EC84247BBE0200EF8478 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9069EC82247BBE0200EF8478 /* Main.storyboard */; };
 		9069EC86247BBE0500EF8478 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9069EC85247BBE0500EF8478 /* Assets.xcassets */; };
 		9069EC89247BBE0500EF8478 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9069EC87247BBE0500EF8478 /* LaunchScreen.storyboard */; };
+		90720254247C1515009EEC84 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90720253247C1515009EEC84 /* ChecklistItem.swift */; };
+		90720256247C1AF6009EEC84 /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90720255247C1AF6009EEC84 /* TodoList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		9069EC85247BBE0500EF8478 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9069EC88247BBE0500EF8478 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9069EC8A247BBE0500EF8478 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90720253247C1515009EEC84 /* ChecklistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
+		90720255247C1AF6009EEC84 /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
 		908FD678247BE0FB00F91EDD /* ProtocolsPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ProtocolsPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
@@ -61,6 +65,8 @@
 				9069EC7C247BBE0200EF8478 /* AppDelegate.swift */,
 				9069EC7E247BBE0200EF8478 /* SceneDelegate.swift */,
 				9069EC80247BBE0200EF8478 /* ChecklistViewController.swift */,
+				90720255247C1AF6009EEC84 /* TodoList.swift */,
+				90720253247C1515009EEC84 /* ChecklistItem.swift */,
 				9069EC82247BBE0200EF8478 /* Main.storyboard */,
 				9069EC85247BBE0500EF8478 /* Assets.xcassets */,
 				9069EC87247BBE0500EF8478 /* LaunchScreen.storyboard */,
@@ -140,9 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90720256247C1AF6009EEC84 /* TodoList.swift in Sources */,
 				9069EC81247BBE0200EF8478 /* ChecklistViewController.swift in Sources */,
 				9069EC7D247BBE0200EF8478 /* AppDelegate.swift in Sources */,
 				9069EC7F247BBE0200EF8478 /* SceneDelegate.swift in Sources */,
+				90720254247C1515009EEC84 /* ChecklistItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
