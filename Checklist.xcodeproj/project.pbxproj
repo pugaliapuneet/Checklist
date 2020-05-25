@@ -24,6 +24,7 @@
 		9069EC85247BBE0500EF8478 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9069EC88247BBE0500EF8478 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9069EC8A247BBE0500EF8478 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		908FD678247BE0FB00F91EDD /* ProtocolsPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ProtocolsPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +57,7 @@
 		9069EC7B247BBE0200EF8478 /* Checklist */ = {
 			isa = PBXGroup;
 			children = (
+				908FD678247BE0FB00F91EDD /* ProtocolsPlayground.playground */,
 				9069EC7C247BBE0200EF8478 /* AppDelegate.swift */,
 				9069EC7E247BBE0200EF8478 /* SceneDelegate.swift */,
 				9069EC80247BBE0200EF8478 /* ChecklistViewController.swift */,
