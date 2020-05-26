@@ -8,7 +8,16 @@
 
 import UIKit
 
+// Delegation protocol
+protocol AddItemViewControllerDelegate: class {
+    func addItemViewControllerDidCancel(_ controller: AddItemTableViewController)
+    func addItemViewController(_ controller: AddItemTableViewController, didFinishAdding item: ChecklistItem)
+}
+
 class AddItemTableViewController: UITableViewController {
+    
+    //the delegated guy
+    weak var delegate: AddItemViewControllerDelegate?
 
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var addBarButton: UIBarButtonItem!
@@ -17,10 +26,17 @@ class AddItemTableViewController: UITableViewController {
     
     @IBAction func cancel(_ sender: Any) {
         navigationController?.popViewController(animated: true)
+        delegate?.addItemViewControllerDidCancel(self)
     }
     
     @IBAction func done(_ sender: Any) {
         navigationController?.popViewController(animated: true)
+        let item = ChecklistItem()
+        if let textFieldtext = textField.text {
+            item.text = textFieldtext
+        }
+        item.checked = false
+        delegate?.addItemViewController(self, didFinishAdding: item)
     }
     
     
@@ -56,6 +72,7 @@ extension AddItemTableViewController: UITextFieldDelegate {
         }
         
         let newText = oldText.replacingCharacters(in: stringRange, with: string)
+        
         if newText.isEmpty {
             addBarButton.isEnabled = false
         } else {

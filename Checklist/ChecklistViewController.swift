@@ -91,4 +91,37 @@ class ChecklistViewController: UITableViewController {
             label.text = item.text
         }
     }
+    
+    
+    //Become the delegate for AddItemTVC
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addItemSegue" {
+            if let addItemTVC = segue.destination as? AddItemTableViewController {
+                addItemTVC.delegate = self
+            }
+        }
+    }
+}
+
+extension ChecklistViewController: AddItemViewControllerDelegate {
+    func addItemViewControllerDidCancel(_ controller: AddItemTableViewController) {
+        //goback
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func addItemViewController(_ controller: AddItemTableViewController, didFinishAdding item: ChecklistItem) {
+        //goback
+        navigationController?.popViewController(animated: true)
+        
+        //update the model
+        let rowIndex = todoList.todos.count
+        todoList.todos.append(item)
+        
+        //Add a row at the bottom of the table
+        let indexPath = IndexPath(row: rowIndex, section: 0)
+        tableView.insertRows(at: [indexPath], with: .automatic)
+    }
+    
+
 }
