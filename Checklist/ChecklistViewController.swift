@@ -12,6 +12,14 @@ class ChecklistViewController: UITableViewController {
     
     var todoList: TodoList
     
+    @IBAction func addItem(_ sender: Any) {
+        let newRowIndex = todoList.todos.count
+        _ = todoList.newTodo()
+        
+        let indexPath = IndexPath(row: newRowIndex, section: 0)
+        tableView.insertRows(at: [indexPath], with: .automatic)
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         todoList = TodoList()
         
@@ -20,8 +28,13 @@ class ChecklistViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
+    
+    // /////////////////////
+    // Configuring the table
+    // /////////////////////
     
     //define number of rows
     
@@ -50,6 +63,10 @@ class ChecklistViewController: UITableViewController {
             tableView.deselectRow(at: indexPath, animated: true)
         }
     }
+    
+    // ////////////////
+    // Helper functions
+    // ////////////////
     
     func configureCheckmark(for cell: UITableViewCell, with item: ChecklistItem) {
         
